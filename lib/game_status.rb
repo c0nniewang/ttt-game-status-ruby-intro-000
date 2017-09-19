@@ -16,7 +16,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  if board.all? {|i| !position_taken?(board, i)}
+  if board.all? {|pos| pos == " " || pos == nil}
     return false
   end
 
