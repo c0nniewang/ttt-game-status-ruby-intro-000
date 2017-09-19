@@ -20,7 +20,7 @@ def won?(board)
     if board[arr[0]] == board[arr[1]] && board[arr[1]] == board[arr[2]]
       return arr
     else
-      false
+      return false
     end
   end
 end
