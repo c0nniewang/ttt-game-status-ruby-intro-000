@@ -19,8 +19,9 @@ def won?(board)
   if board.all? {|pos| pos == " " || pos == nil}
     return false
   end
+
   WIN_COMBINATIONS.each do |arr|
-    if board[arr[0]] == board[arr[1]] && board[arr[1]] == board[arr[2]]
+    if position_taken?(board, arr[0]) && board[arr[0]] == board[arr[1]] && board[arr[1]] == board[arr[2]]
       return arr
     end
   end
