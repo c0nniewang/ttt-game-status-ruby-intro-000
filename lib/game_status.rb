@@ -48,6 +48,7 @@ end
 
 def winner(board)
   if won?(board)
-    return board[arr[0]]
+    newarr = won?(board)
+    return board[newarr[0]]
   end
 end
