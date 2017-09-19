@@ -31,3 +31,11 @@ end
 def full?(board)
   board.all? {|pos| pos != " " && pos != nil}
 end
+
+def draw?(board)
+  if full?(board) && !won?(board)
+    true
+  else
+    false
+  end
+end
