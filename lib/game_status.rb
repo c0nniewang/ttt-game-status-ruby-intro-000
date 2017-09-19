@@ -16,7 +16,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  if board.each {|pos| pos == " " || pos == nil}
+  if board.all? {|pos| pos == " " || pos == nil}
     return false
   end
   WIN_COMBINATIONS.each do |arr|
